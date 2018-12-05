@@ -14,7 +14,10 @@ class MessageList extends React.Component {
                     username={username}
                     date={date}
                     numRetweets={retweets}
-                    numFavorites={favorites}
+                    numFavorites={favorites} 
+                    onRetweet={() => this.props.onRetweet(id)}
+                    onFavorite={() => this.props.onFavorite(id)}
+                    onReplyTweet={() => this.props.onReplyTweet(id, username)}
                 />
             )
     }
