@@ -1,4 +1,4 @@
-.root1 {
+.rootMessage {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -17,8 +17,8 @@
 }
 
 .avatar {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
 }
 
@@ -45,4 +45,10 @@
 
 .icon {
     margin-right: 3em;
+}
+
+.num {
+    font-size: 10pt;
+    margin-right: 3em;
+    margin-left: 0.25em;
 }

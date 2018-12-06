@@ -4,14 +4,17 @@ import './MessageList.css'
 
 class MessageList extends React.Component {
 
-    helperMessage = ({ text, picture, displayName, date, username }) => {
+    generateTweet = ({ text, picture, displayName, date, username, id, retweets, favorites }) => {
             return (
                 <Message 
+                    key={id}
                     text={text} 
                     picture={picture}
                     displayName={displayName}
                     username={username}
                     date={date}
+                    numRetweets={retweets}
+                    numFavorites={favorites}
                 />
             )
     }
@@ -19,7 +22,7 @@ class MessageList extends React.Component {
     render() {
         return(
             <div className="rootList">
-                {this.props.messages.map((msg) => this.helperMessage(msg))}
+                {this.props.messages.map((msg) => this.generateTweet(msg)).reverse()}
             </div>
         )
     }
